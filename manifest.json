@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Hello World Popup",
+  "name": "A test extension",
   "version": "1.0",
-  "description": "A simple Hello World popup extension.",
+  "description": "A simple test extension.",
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon.png"
