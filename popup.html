@@ -1,26 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello</title>
+    <meta charset="utf-8" />
+    <title>Form Scanner</title>
     <style>
       body {
-        min-width: 200px;
-        font-family: Arial, sans-serif;
-        padding: 10px;
-      }
-      h1 {
-        font-size: 20px;
-        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+        margin: 12px;
+        width: 360px;
       }
       button {
-        margin-top: 10px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      pre {
+        white-space: pre-wrap;
+        background: #f7f7f7;
+        padding: 8px;
+        border-radius: 6px;
+        max-height: 320px;
+        overflow: auto;
+      }
+      .small {
+        font-size: 12px;
+        color: #666;
+        margin-top: 8px;
+      }
+      .form-block {
+        margin-bottom: 12px;
+        padding: 8px;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      }
+      .field {
+        font-size: 13px;
+        margin: 4px 0;
+      }
+      .k {
+        font-weight: 600;
       }
     </style>
   </head>
   <body>
-    <h1>Test Extension</h1>
-    <button id="clickMe">Click to fill form</button>
-    <p id="message"></p>
+    <h3>Form Scanner</h3>
+    <div>
+      <button id="scanBtn">Scan forms on page</button>
+      <span class="small" id="status"></span>
+    </div>
+    <div id="output"></div>
+
     <script src="popup.js"></script>
   </body>
 </html>

@@ -1,13 +1,18 @@
 {
   "manifest_version": 3,
-  "name": "A test extension",
+  "name": "Form Scanner",
   "version": "1.0",
-  "description": "A simple test extension.",
+  "description": "Scans forms on the page and returns labels, names, placeholders, types and ids of inputs.",
+  "permissions": ["activeTab", "scripting"],
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": "icon.png"
+    "default_title": "Form Scanner",
+    "default_popup": "popup.html"
   },
-  "icons": {
-    "128": "icon.png"
-  }
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
 }
